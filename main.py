@@ -20,7 +20,8 @@ while True:
     new = getDownloads()[-1]
     if (og != new):
         if (new.startswith("M3 tables")):
-            print(f"{new} has been downloaded")
             os.rename(f"{directory}/{new}", f"{directory}/table.csv")
             os.remove("C:/Users/smrit/PycharmProjects/M3/cities/table.csv")
             shutil.move(f"{directory}/table.csv", f"C:/Users/smrit/PycharmProjects/M3/cities/table.csv")
+            print(f"tables.csv has been updated")
+
